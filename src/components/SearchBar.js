@@ -1,9 +1,12 @@
+import { useState } from "react";
+import UseFetch from '../helpers/UseFetch';
 import './SearchBar.css'
 
 export default function SearchBar({input, setInput}) {
 
-    function handleChange(event) {
-        setInput(event.target.value)
+    async function searchUser(input) {
+        const result = await UseFetch(input)
+        console.log(result)
     }
 
     return (
@@ -11,9 +14,9 @@ export default function SearchBar({input, setInput}) {
             <input
                 value={input}
                 placeholder="Search for a GitHub username"
-                onChange={handleChange}
+                onChange={(e) => setInput(e.target.value)}
             />
-            <button onClick={() => this.showUserResult(input)}>Search</button>
+            <button onClick={(e) => searchUser(input)}>Search</button>
         </div>
     );
 }
