@@ -5,7 +5,7 @@ export default function SearchPage() {
     const [input, setInput] = useState('');
     
     return (
-        <SearchBar
+        <SearchBar  //adicionar imagem de fundo e header?
             input={input}
             setInput={setInput}
         />

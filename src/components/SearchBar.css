@@ -24,6 +24,10 @@ input {
     padding-left: 20px;
 }
 
+input:focus{
+    color: #00B4CC;
+  }  
+
 button {
     width: 100px;
     height: 40px;
