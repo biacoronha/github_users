@@ -10,9 +10,7 @@ function App() {
         <Route path="/" exact>
           <SearchPage />
         </Route>
-        <Route path="/user" exact>
-          <UserPage />
-        </Route>
+        <Route path="/user" render={(props) => <UserPage {...props}/>}/>
       </Switch>
     </BrowserRouter>
   );
