@@ -1,5 +1,5 @@
 import { Redirect } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import UseFetch from '../helpers/UseFetch';
 import * as Constants from "../helpers/Constants";
 import './SearchBar.css'
@@ -13,7 +13,7 @@ export default function SearchBar({input, setInput}) {
         setUser(await UseFetch(url))
     }
 
-    return (    //aumentar a altura e diminuir o comprimento?
+    return (
         <div>
         {user ? <Redirect to={{pathname:"/user", state: {user: user}}}/> :
         <div className="search">

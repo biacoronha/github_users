@@ -8,7 +8,7 @@ export default function SearchPage() {
     return (
         <div className="main-section">
             <h1>To search for a GitHub user, type in the username</h1>
-            <SearchBar  //adicionar imagem de fundo e header?
+            <SearchBar
                 input={input}
                 setInput={setInput}
             />

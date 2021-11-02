@@ -7,16 +7,10 @@ import './UserPage.css';
 export default function UserPage(props) {
     const user = props.location.state.user
     const [repos, setRepos] = useState()
-    console.log(user)
-    //let repos = null;
-    //console.log(user.login)
-    // setRepos(UseFetch(user.repos_url))
-    console.log(repos)
 
     if(!repos) {
         UseFetch(user.repos_url).then(repos => {
             setRepos(repos)
-            console.log(repos)
         })
     }
 
