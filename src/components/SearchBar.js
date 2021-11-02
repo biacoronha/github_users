@@ -1,22 +1,16 @@
 import { Redirect } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import UseFetch from '../helpers/UseFetch';
+import * as Constants from "../helpers/Constants";
 import './SearchBar.css'
 
 export default function SearchBar({input, setInput}) {
     const [user, setUser] = useState('')
-    const [redirect, setRedirect] = useState(false)
-    let test = null;
 
     async function searchUser(input) {
-        setUser(await UseFetch(input))
-        // const result = await UseFetch(input)
-        // console.log(result)
-        // console.log(typeof result)
-        // setUserResult(result)
-        // test = result
-        // console.log(test)
-        // setRedirect(true)
+        const url = Constants.BASE_URL + Constants.USER + input;
+
+        setUser(await UseFetch(url))
     }
 
     return (    //aumentar a altura e diminuir o comprimento?
