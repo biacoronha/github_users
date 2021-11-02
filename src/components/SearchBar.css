@@ -14,7 +14,7 @@
 
 input {
     width: 100%;
-    border: 3px solid #00B4CC;
+    border: 3px solid #00b5b5;
     border-right: none;
     padding: 5px;
     height: 60px;
@@ -22,25 +22,21 @@ input {
     outline: none;
     color: #9DBFAF;
     padding-left: 28px;
+    font-size: 20px;
 }
 
 input:focus{
-    color: #00B4CC;
+    color: #474444;
   }  
-
-input::placeholder {
-    font-size: 20px;
-    vertical-align: middle;
-}
 
 button {
     width: 140px;
     height: 76px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
+    border: 1px solid #00b5b5;
+    background: #00b5b5;
     text-align: center;
     color: #fff;
     border-radius: 0 30px 30px 0;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 24px;
 }

@@ -9,8 +9,8 @@ export default function Header() {
         <div>
             {redirect ? <Redirect to="/"/> : 
             <header>
-                <div className="logo" onClick={() => setRedirect(true)}>
-                    Logo
+                <div className="home" onClick={() => setRedirect(true)}>
+                    Home
                 </div>
             </header>
             }
