@@ -1,0 +1,17 @@
+.main-section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+}
+
+.main-section h1 {
+    font-size: 38px;
+    line-height: 32px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 7%;
+    margin-top: 0;
+    color: #474444;
+}
