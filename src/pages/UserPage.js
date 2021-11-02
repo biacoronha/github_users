@@ -1,6 +1,7 @@
 import { useState } from 'react/cjs/react.development';
 import UseFetch from '../helpers/UseFetch';
 import RepositoryCard from '../components/RepositoryCard';
+import Header from '../components/Header';
 import './UserPage.css';
 
 export default function UserPage(props) {
@@ -20,6 +21,8 @@ export default function UserPage(props) {
     }
 
     return(
+        <div>
+        <Header/>
         <main>
             <div className="main">
                 <div className="user-data">
@@ -43,5 +46,6 @@ export default function UserPage(props) {
                 </div>
             </div>
         </main>
+        </div>
     );
 }
