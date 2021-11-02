@@ -5,8 +5,8 @@ export default function RepositoryCard(repository) {
     console.log(repository)
     return (
         <article>
-            <div>{repository.name}</div>
-            <div>{repository.description}</div>
+            <h2>{repository.name}</h2>
+            <span>{repository.description}</span>
         </article>
     );
 }
