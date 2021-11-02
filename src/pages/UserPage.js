@@ -30,9 +30,11 @@ export default function UserPage(props) {
                         <img src = {user.avatar_url} />
                     </div>
                     <section className="info">
-                        <div>{user.login}</div>
-                        <div>{user.public_repos}</div>
-                        <div>{user.name}</div>
+                        <h2>{user.login}</h2>
+                        <span>
+                            <span className="num-repos">{user.public_repos}</span> Repositories
+                        </span>
+                        <h1>{user.name}</h1>
                     </section>
                 </div>
                 <div className="repos-card">

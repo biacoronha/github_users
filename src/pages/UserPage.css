@@ -25,7 +25,7 @@
 }
 
 .info {
-    margin-top: 60px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,4 +36,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+h1 {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 300;
+}
+
+.num-repos {
+    font-weight: 600;
 }
