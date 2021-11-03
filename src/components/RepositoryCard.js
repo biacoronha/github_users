@@ -2,7 +2,6 @@ import './RepositoryCard.css'
 
 export default function RepositoryCard(repository) {
     repository = repository.repository
-    console.log(repository)
     return (
         <article>
             <h2>{repository.name}</h2>

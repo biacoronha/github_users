@@ -5,23 +5,13 @@ import Header from '../components/Header';
 import './UserPage.css';
 
 export default function UserPage(props) {
-    console.log(props)
     const user = props.location.state.user
-    const [noRepos, setNoRepos] = useState(false)
     const [repos, setRepos] = useState(false)
 
     if(!repos) {
-        try {
-            UseFetch(user.repos_url).then(repos => {
-                setRepos(repos)
-                console.log(repos)
-                console.log("yes")
-            })
-        }
-        catch {
-            console.log("no")
-            setNoRepos(true)
-        }
+        UseFetch(user.repos_url).then(repos => {
+            setRepos(repos)
+        })
     }
 
     return(
@@ -48,7 +38,6 @@ export default function UserPage(props) {
                         :
                         <h1 className="no-repos">NO REPOSITORIES YET</h1>
                     }
-
                 </div>
             </div>
         </main>

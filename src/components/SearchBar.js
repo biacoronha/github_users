@@ -16,7 +16,6 @@ export default function SearchBar({input, setInput}) {
         } catch {
             alert(Constants.ALERT)
         }
-
     }
 
     return (
