@@ -22,7 +22,7 @@ For the Search Page, I wanted to have something similar to search engines like G
 
 In the User Page, we have the user information on top and the repositories as a list of cards. This was inspired by Instagram design, with the repositories cards in my application acting as the pictures posted by the user.
 
-## Important Information
+## Scenarios Contemplated
 
 I tried to think of all possible scenarios and because of that my solution captures the following:
  - User is found with all information
