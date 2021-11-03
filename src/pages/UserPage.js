@@ -5,13 +5,23 @@ import Header from '../components/Header';
 import './UserPage.css';
 
 export default function UserPage(props) {
+    console.log(props)
     const user = props.location.state.user
-    const [repos, setRepos] = useState()
+    const [noRepos, setNoRepos] = useState(false)
+    const [repos, setRepos] = useState(false)
 
     if(!repos) {
-        UseFetch(user.repos_url).then(repos => {
-            setRepos(repos)
-        })
+        try {
+            UseFetch(user.repos_url).then(repos => {
+                setRepos(repos)
+                console.log(repos)
+                console.log("yes")
+            })
+        }
+        catch {
+            console.log("no")
+            setNoRepos(true)
+        }
     }
 
     return(
@@ -32,11 +42,11 @@ export default function UserPage(props) {
                     </section>
                 </div>
                 <div className="repos-card">
-                    {repos ?
+                    {(repos && repos.length > 0) ?
                         repos.map((repository, i) =>
                         <RepositoryCard repository={repository}/>)
                         :
-                        <div>NO REPS</div>
+                        <h1 className="no-repos">NO REPOSITORIES YET</h1>
                     }
 
                 </div>

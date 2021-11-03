@@ -40,3 +40,8 @@ button {
     cursor: pointer;
     font-size: 24px;
 }
+
+.alert {
+    color: red;
+    font-size: 26px;
+}

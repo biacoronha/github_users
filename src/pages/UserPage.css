@@ -56,3 +56,11 @@ h2 {
 span {
     font-size: 20px;
 }
+
+.no-repos {
+    width: 100%;
+    text-align: center;
+    height: 600px;
+    margin-top: 8%;
+    font-weight: 300;
+}
